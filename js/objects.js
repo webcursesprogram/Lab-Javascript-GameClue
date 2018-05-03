@@ -173,3 +173,24 @@ var roomsArray = [
         name: "Patio"
     }
 ];
+
+//Random function to select an element of an array
+function arrayRandom(params) {
+    return params[Math.floor(Math.random()*params.length)];    
+}
+
+//Function that selects the killer
+function killerChoose() {
+    var killer = {
+        name: arrayRandom(charactersArray),
+        weapon: arrayRandom(weaponsArray),
+        room: arrayRandom(roomsArray)
+    }
+    return killer;
+}
+
+function revealMystery(params) {
+   console.log(killerChoose()); 
+}
+
+revealMystery();
