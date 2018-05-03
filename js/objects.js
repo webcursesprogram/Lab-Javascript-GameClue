@@ -188,3 +188,9 @@ function killerChoose() {
     }
     return killer;
 }
+
+function revealMystery(params) {
+    console.log(killerChoose()); 
+ }
+ 
+ revealMystery();
