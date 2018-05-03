@@ -189,8 +189,9 @@ function killerChoose() {
     return killer;
 }
 
-function revealMystery() {
-    console.log(killerChoose()); 
+function revealMystery(mystery) {
+    console.log(mystery);
+    window.alert(`The murderer has been ${mystery.name.first_name}, the weapon used was ${mystery.weapon.name}, and it was committed in ${mystery.room.name}`);
  }
  
- revealMystery();
+ revealMystery(killerChoose());
